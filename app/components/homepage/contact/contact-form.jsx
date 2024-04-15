@@ -36,17 +36,19 @@ function ContactForm() {
 
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicID=process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ;
     const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
 
     try {
-      const res = await emailjs.send(serviceID, templateID, input, options);
+      emailjs.init(publicID);
+      const res = await emailjs.send(serviceID,templateID, input, publicID);
 
       if (res.status === 200) {
         toast.success('Message sent successfully!');
         setInput({
-          name: '',
-          email: '',
-          message: '',
+          name: input.name,
+          email: input.email,
+          message: input.message,
         });
       };
     } catch (error) {

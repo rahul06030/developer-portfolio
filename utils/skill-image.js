@@ -32,6 +32,7 @@ import html from '/public/svg/skills/html.svg';
 import illustrator from '/public/svg/skills/illustrator.svg';
 import ionic from '/public/svg/skills/ionic.svg';
 import java from '/public/svg/skills/java.svg';
+import spring from '/public/svg/skills/spring.svg';
 import javascript from '/public/svg/skills/javascript.svg';
 import julia from '/public/svg/skills/julia.svg';
 import kotlin from '/public/svg/skills/kotlin.svg';
@@ -43,6 +44,7 @@ import memsql from '/public/svg/skills/memsql.svg';
 import microsoftoffice from '/public/svg/skills/microsoftoffice.svg';
 import mongoDB from '/public/svg/skills/mongoDB.svg';
 import mysql from '/public/svg/skills/mysql.svg';
+import microservices from '/public/svg/skills/microservices.svg';
 import nextJS from '/public/svg/skills/nextJS.svg';
 import nginx from '/public/svg/skills/nginx.svg';
 import numpy from '/public/svg/skills/numpy.svg';
@@ -85,6 +87,8 @@ export const skillsImage = (skill) => {
       return photoshop;
     case 'docker':
       return docker;
+    case 'microservices':
+      return microservices;
     case 'illustrator':
       return illustrator;
     case 'adobe xd':
@@ -133,6 +137,8 @@ export const skillsImage = (skill) => {
       return vuetifyjs;
     case 'c':
       return c;
+    case 'spring':
+      return spring;
     case 'c++':
       return cplusplus;
     case 'c#':
